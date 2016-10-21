@@ -1,0 +1,12 @@
+language: cpp
+compiler:
+  - clang
+addons:
+  apt:
+    packages:
+      - cmake
+script:
+  - mkdir build 
+  - cd build
+  - cmake .. && make
+  - tests -s -r compact
